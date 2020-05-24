@@ -5,19 +5,21 @@ the numbers instead of the average.
 """
 total=0
 n=0
-max=None
-min=None
+max=0
+min=0
 while True:
    num=None
    try:
       num=input("Enter a number: ")
+      print(num)
       if num=="Done" or num=="done":
          break
       num=int(num)
-      if min is None or num<min:
-         min=num
-      if num is None or num>max:
+      if num is 0 or num>max:
          max=num
+      if min is 0 or num<min:
+         min=num
+         
       total+=num
       n+=1
    except:
